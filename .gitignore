@@ -1,18 +1,15 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+'''this is an arudino nano based project so here the code for the shoot button for the same.'''
+#include <Servo.h>
+Servo s;
 
-# Other files and folders
-.settings/
+void setup() {
+  s.attach(7);
+}
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+void loop() {
+  s.write(60);
+  delay(2000);
+  s.write(180);
+  delay(400);
+}
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
